@@ -1,0 +1,14 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Thanh",
+            "gender": "F"
+        },
+        {
+            "id": 2,
+            "name": "Nga",
+            "gender": "F"
+        }
+    ]
+}
