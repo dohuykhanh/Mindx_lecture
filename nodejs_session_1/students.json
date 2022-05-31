@@ -2,13 +2,18 @@
     "data": [
         {
             "id": 1,
-            "name": "Thanh",
-            "gender": "F"
+            "name": "Toan",
+            "Gender": "M"
         },
         {
             "id": 2,
-            "name": "Nga",
-            "gender": "F"
+            "name": "Tu",
+            "Gender": "M"
+        },
+        {
+            "id": 3,
+            "name": "Minh",
+            "Gender": "M"
         }
     ]
 }

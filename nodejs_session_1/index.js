@@ -1,4 +1,5 @@
 const fs = require('fs') // file system
+const { toNamespacedPath } = require('path')
 const {sum, sub} = require('./custom_module/math')
 
 // fs.readFile('./Mindx_1.txt','utf-8' ,(err, data) => {
@@ -9,15 +10,21 @@ const {sum, sub} = require('./custom_module/math')
 //     console.log('data: ', data)
 // })
 // CRUD : Create, delete, update, Read
-// const data = fs.readFileSync('./students.json' )
-// const students = JSON.parse(data)
-// const newStudent = {
-//     id: 2,
-//     name: 'Nga',
-//     gender: 'F'
-// }
-// students['data'].push(newStudent)
 
-// fs.writeFileSync('./students.json', JSON.stringify(students))
+const data = fs.readFileSync('./students.json' )
+const students = JSON.parse(data)
 
-console.log(sub(1, 2))
+students['data'].splice(students['data'].length - 1,1)
+
+const newStudent = {
+    data: [
+        {
+            id: 1,
+            name: 'Toan',
+            Gender: 'M'
+        }
+    ]
+}
+
+fs.writeFileSync('./students.json', JSON.stringify(students))
+
