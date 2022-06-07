@@ -1,0 +1,57 @@
+STEP 1 : Tao List Phim:
+[
+    {
+        "id": 1,
+        "name": "Money Heist",
+        "type": "free"
+    },
+    {
+        "id": 2,
+        "name": "Crush landing on you",
+        "type": "charged"
+    },
+    {
+        "id": 1,
+        "name": "Train to Busan"
+        "type": "charged"
+    },
+]
+
+STEP 2: Tao List Guest:
+[
+    {
+        "id" 1,
+        "name" :"Nghia"
+    },
+    {
+        "id" 2,
+        "name" :"Toan"
+    }
+]
+
+STEP 3: Tao List Member:
+[
+    {
+        "id" 1,
+        "name" :"Hai Anh"
+    },   
+    {
+        "id" 2,
+        "name" :"Hanh"
+    },   
+]
+
+STEP 4: Tao List Admin
+[
+ {
+        "id" 1,
+        "name" :"Hoai"
+    },   
+    {
+        "id" 2,
+        "name" :"Kiem"
+    },      
+]
+
+STEP 5: Tao api get list phim (Guest chi get dc cac phim type free, Member va Admin get duoc tat ca cac phim)
+STEP 6: Tao Api them phim moi (Chi co admin moi them duoc phim)
