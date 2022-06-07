@@ -1,0 +1,52 @@
+Step1: Create an application with expressJS
+Step2: Tao array User : 
+[
+    {
+        "id": 1,
+        "name": "Nga",
+        "password": "123456" 
+        "role": "student"
+    },
+    {
+        "id": 2,
+        "name": "Tuan",
+        "password": "654321" ,
+        "role": "teacher"
+    },
+    {
+        "id": 3,
+        "name": "Manh",
+        "password": "123a" ,
+        "role": "Parent"
+    },
+]
+
+Step 3: Tao list Student: 
+[
+    {
+        "id": 1,
+        "name": "Van",
+        "grade": 9,
+    },
+    {
+        "id": 2,
+        "name": "Nghia",
+        "grade": 8,
+    },
+    {
+        "id": 3,
+        "name": "Hao",
+        "grade": 5,
+    }
+]
+
+Step 4: Tat ca user duoc quyen get list student
+Create api login:
+Input : user name + password
+Output: JWT (Encrypt algorithm + signing Key)
+
+Create middleware de: 
+Authenmiddle ware de check token phia client da bao gom thong tin nguoi dung trong user.
+Neu ok ==>  return ve student. If not return Unauthorize message
+
+Step 5:  Chi co user voi role la teacher duoc quyen sua diem Student
