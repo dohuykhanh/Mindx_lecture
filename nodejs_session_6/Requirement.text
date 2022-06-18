@@ -14,10 +14,10 @@ Step 6: Router UPDATE (PUT):
 Step 7: Router DELETE (DELETE):
 -   Tim ban ghi trong DB ==> Neu khong co return error message
 -   Tim thay ban ghi ==> Xoa ban ghi
+Step 8: Router GET ==>  su dung aggregation
+-   
 
 
-start point = 5
-endpoint = 15
 
 
 skip = 4 ==> bo qua cac ban ghi 1,2,3,4 ==> querry tu ban ghi so 5
