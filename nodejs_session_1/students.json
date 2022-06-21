@@ -1,19 +1,1385 @@
 {
-    "data": [
+    "contentTypes": [
         {
-            "id": 1,
-            "name": "Toan",
-            "Gender": "M"
+            "sys": {
+                "id": "aeSubtopics",
+                "type": "ContentType"
+            },
+            "name": "ae.subtopic",
+            "displayField": "aeSubtopicName",
+            "description": "",
+            "fields": [
+                {
+                    "id": "aeSubtopicName",
+                    "name": "ae.subtopic.name",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "aeSubtopicAsset",
+                    "name": "ae.subtopic.asset",
+                    "type": "Link",
+                    "localized": false,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Asset",
+                    "validations": []
+                },
+                {
+                    "id": "aeSubtopicDescription",
+                    "name": "ae.subtopic.description",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "aeSubtopicBody",
+                    "name": "ae.subtopic.body",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "aeSubtopicTopic",
+                    "name": "ae.subtopic.topic",
+                    "type": "Link",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Entry",
+                    "validations": [
+                        {
+                            "linkContentType": [
+                                "aeTopics"
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "id": 2,
-            "name": "Tu",
-            "Gender": "M"
+            "sys": {
+                "id": "aeTopics",
+                "type": "ContentType"
+            },
+            "name": "ae.topic",
+            "displayField": "aeTopicName",
+            "description": "",
+            "fields": [
+                {
+                    "id": "aeTopicName",
+                    "name": "ae.topic.name",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "aeTopicAsset",
+                    "name": "ae.topic.asset",
+                    "type": "Link",
+                    "localized": false,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Asset",
+                    "validations": []
+                },
+                {
+                    "id": "aeTopicDescription",
+                    "name": "ae.topic.description",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "aeTopicBody",
+                    "name": "ae.topic.body",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "aeTopicSubtopic",
+                    "name": "ae.topic.subtopic",
+                    "type": "Array",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [],
+                    "items": {
+                        "type": "Link",
+                        "validations": [
+                            {
+                                "linkContentType": [
+                                    "aeSubtopics"
+                                ]
+                            }
+                        ],
+                        "linkType": "Entry"
+                    }
+                }
+            ]
         },
         {
-            "id": 3,
-            "name": "Minh",
-            "Gender": "M"
+            "sys": {
+                "id": "aeMaster",
+                "type": "ContentType"
+            },
+            "name": "ae.master",
+            "displayField": "aeName",
+            "description": "",
+            "fields": [
+                {
+                    "id": "aeName",
+                    "name": "ae.master.name",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "aeAsset",
+                    "name": "ae.master.asset",
+                    "type": "Link",
+                    "localized": false,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Asset",
+                    "validations": []
+                },
+                {
+                    "id": "aeMasterDescription",
+                    "name": "ae.master.description",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "whyDoYouExperienceTheseSymptoms",
+                    "name": "ae.master.why",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "helpfulTips",
+                    "name": "ae.master.tips",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "aeHcp",
+                    "name": "ae.master.hcp",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "aeMasterTopicHeadline",
+                    "name": "ae.master.topic.headline",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "aeTopic",
+                    "name": "ae.master.topic",
+                    "type": "Array",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [],
+                    "items": {
+                        "type": "Link",
+                        "validations": [
+                            {
+                                "linkContentType": [
+                                    "aeTopics"
+                                ]
+                            }
+                        ],
+                        "linkType": "Entry"
+                    }
+                }
+            ]
+        },
+        {
+            "sys": {
+                "id": "regBlock1",
+                "type": "ContentType"
+            },
+            "name": "treatment.chemo.block",
+            "displayField": "blockId",
+            "description": "",
+            "fields": [
+                {
+                    "id": "blockId",
+                    "name": "treatment.chemo.block.name",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "location",
+                    "name": "treatment.chemo.block.location ",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "in": [
+                                "Home",
+                                "Hospital"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "administration",
+                    "name": "treatment.chemo.block.administration",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "in": [
+                                "Intravenous",
+                                "Oral",
+                                "Subcutaneous"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "duration",
+                    "name": "treatment.chemo.block.duration",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "treatmentChemoBlockSchedule",
+                    "name": "treatment.chemo.block.schedule",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "drug1",
+                    "name": "treatment.chemo.block.drug",
+                    "type": "Array",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [],
+                    "items": {
+                        "type": "Link",
+                        "validations": [
+                            {
+                                "linkContentType": [
+                                    "treatmentChemoDrug"
+                                ]
+                            }
+                        ],
+                        "linkType": "Entry"
+                    }
+                },
+                {
+                    "id": "instructions",
+                    "name": "treatment.chemo.block.instructions",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "sys": {
+                "id": "regimen",
+                "type": "ContentType"
+            },
+            "name": "treatment.chemo",
+            "displayField": "regName",
+            "description": "",
+            "fields": [
+                {
+                    "id": "regName",
+                    "name": "treatment.chemo.name",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "regBody",
+                    "name": "treatment.chemo.body",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "regSchedule",
+                    "name": "treatment.chemo.schedule",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "regBlock1",
+                    "name": "treatment.chemo.block_1",
+                    "type": "Link",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Entry",
+                    "validations": [
+                        {
+                            "linkContentType": [
+                                "regBlock1"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "regBlock2",
+                    "name": "treatment.chemo.block_2",
+                    "type": "Link",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Entry",
+                    "validations": [
+                        {
+                            "linkContentType": [
+                                "regBlock1"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "regBlock3",
+                    "name": "treatment.chemo.block_3",
+                    "type": "Link",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Entry",
+                    "validations": [
+                        {
+                            "linkContentType": [
+                                "regBlock1"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "regBlock4",
+                    "name": "treatment.chemo.block_4",
+                    "type": "Link",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Entry",
+                    "validations": [
+                        {
+                            "linkContentType": [
+                                "regBlock1"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "regBlock5",
+                    "name": "treatment.chemo.block_5",
+                    "type": "Link",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Entry",
+                    "validations": [
+                        {
+                            "linkContentType": [
+                                "regBlock1"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "regRest",
+                    "name": "treatment.chemo.rest",
+                    "type": "Link",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Entry",
+                    "validations": [
+                        {
+                            "linkContentType": [
+                                "regRest"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "whatToTellMyDoctor",
+                    "name": "treatment.chemo.hcp",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "ae",
+                    "name": "treatment.chemo.ae",
+                    "type": "Array",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [],
+                    "items": {
+                        "type": "Link",
+                        "validations": [
+                            {
+                                "linkContentType": [
+                                    "adverseEvents"
+                                ]
+                            }
+                        ],
+                        "linkType": "Entry"
+                    }
+                },
+                {
+                    "id": "regTopic",
+                    "name": "treatment.chemo.topic",
+                    "type": "Link",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Entry",
+                    "validations": []
+                }
+            ]
+        },
+        {
+            "sys": {
+                "id": "treatmentChemoTopic",
+                "type": "ContentType"
+            },
+            "name": "treatment.chemo.topic",
+            "displayField": "topicName",
+            "description": "",
+            "fields": [
+                {
+                    "id": "topicName",
+                    "name": "treatment.chemo.topic.name",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "topicAsset",
+                    "name": "treatment.chemo.topic.asset",
+                    "type": "Link",
+                    "localized": false,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Asset",
+                    "validations": []
+                },
+                {
+                    "id": "treatmentChemoTopicDescription",
+                    "name": "treatment.chemo.topic.description",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "topicBody",
+                    "name": "treatment.chemo.topic.body",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "sys": {
+                "id": "regRest",
+                "type": "ContentType"
+            },
+            "name": "treatment.chemo.rest",
+            "displayField": "blockId",
+            "description": "",
+            "fields": [
+                {
+                    "id": "blockId",
+                    "name": "treatment.chemo.block.rest.name",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "location",
+                    "name": "treatment.chemo.block.rest.location",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "administration",
+                    "name": "treatment.chemo.block.rest.administration",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "amount",
+                    "name": "treatment.chemo.block.rest.duration",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "instructions",
+                    "name": "treatment.chemo.block.rest.instructions",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": true,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "sys": {
+                "id": "treatmentChemoDrug",
+                "type": "ContentType"
+            },
+            "name": "treatment.chemo.drug",
+            "displayField": "chemoDrugName",
+            "description": "",
+            "fields": [
+                {
+                    "id": "chemoDrugName",
+                    "name": "treatment.chemo.drug.name",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "chemoDrugTopic",
+                    "name": "treatment.chemo.drug.topic",
+                    "type": "Array",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [],
+                    "items": {
+                        "type": "Link",
+                        "validations": [
+                            {
+                                "linkContentType": [
+                                    "treatmentChemoTopic"
+                                ]
+                            }
+                        ],
+                        "linkType": "Entry"
+                    }
+                },
+                {
+                    "id": "chemoDrugBody",
+                    "name": "treatment.chemo.drug.body",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "chemoDrugHcp",
+                    "name": "treatment.chemo.drug.hcp",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [
+                        {
+                            "message": "Only bold, italic, underline, and code marks are allowed",
+                            "enabledMarks": [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "code"
+                            ]
+                        },
+                        {
+                            "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed",
+                            "enabledNodeTypes": [
+                                "heading-1",
+                                "heading-2",
+                                "heading-3",
+                                "heading-4",
+                                "heading-5",
+                                "heading-6",
+                                "ordered-list",
+                                "unordered-list",
+                                "hr",
+                                "blockquote",
+                                "embedded-entry-block",
+                                "embedded-asset-block",
+                                "table",
+                                "hyperlink",
+                                "entry-hyperlink",
+                                "asset-hyperlink",
+                                "embedded-entry-inline"
+                            ]
+                        },
+                        {
+                            "nodes": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "chemoDrugAe",
+                    "name": "treatment.chemo.drug.ae",
+                    "type": "Array",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [],
+                    "items": {
+                        "type": "Link",
+                        "validations": [
+                            {
+                                "linkContentType": [
+                                    "adverseEvents"
+                                ]
+                            }
+                        ],
+                        "linkType": "Entry"
+                    }
+                }
+            ]
+        },
+        {
+            "sys": {
+                "id": "adverseEvents",
+                "type": "ContentType"
+            },
+            "name": "treatment.chemo.ae",
+            "displayField": "aeName",
+            "description": "",
+            "fields": [
+                {
+                    "id": "aeName",
+                    "name": "treatment.chemo.ae.name",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": []
+                },
+                {
+                    "id": "aeAsset",
+                    "name": "treatment.chemo.ae.asset",
+                    "type": "Link",
+                    "localized": false,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Asset",
+                    "validations": []
+                },
+                {
+                    "id": "treatmentChemoAeName",
+                    "name": "treatment.chemo.ae.master",
+                    "type": "Array",
+                    "localized": true,
+                    "required": false,
+                    "disabled": false,
+                    "omitted": false,
+                    "validations": [],
+                    "items": {
+                        "type": "Link",
+                        "validations": [
+                            {
+                                "linkContentType": [
+                                    "aeMaster"
+                                ]
+                            }
+                        ],
+                        "linkType": "Entry"
+                    }
+                }
+            ]
         }
     ]
 }

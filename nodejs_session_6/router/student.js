@@ -167,3 +167,9 @@ module.exports = studentRouter;
 // (4 -1) * 10 = 30 ==> Output = [30 ... 39]
 // (5 -1) * 10 = 40 ==> Output = [40 ... 49]
 // (6 -1) * 10 = 50 ==> Output = [50 ... 59]
+
+// Mongo Compass ==> Code
+// Stage : {
+  // key <toán tử> : value <query >
+// }
+
