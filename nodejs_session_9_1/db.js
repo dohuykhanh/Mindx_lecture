@@ -1,6 +1,7 @@
 const { MongoClient } =require('mongodb')
 
-const url = 'mongodb+srv://theanh:theanh@cluster0.6zqy2.mongodb.net/?retryWrites=true&w=majority';
+// Add mongoDB Atlas URL here
+const url = '';
 const client = new MongoClient(url);
 const dbName = "Student_Management"
 const db = {}
