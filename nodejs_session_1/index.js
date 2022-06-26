@@ -11,20 +11,17 @@ const {sum, sub} = require('./custom_module/math')
 // })
 // CRUD : Create, delete, update, Read
 
-const data = fs.readFileSync('./students.json' )
+const data = fs.readFileSync('./users.json' )
 const students = JSON.parse(data)
 
-students['data'].splice(students['data'].length - 1,1)
+students.forEach((student, index) => {
+    if (index % 2 === 0) {
+        student['role'] = 'admin'
+    } else {
+        student['role'] = 'student'
+    }
+    student['Password'] = 'ThisisPassword123'
+})
 
-const newStudent = {
-    data: [
-        {
-            id: 1,
-            name: 'Toan',
-            Gender: 'M'
-        }
-    ]
-}
-
-fs.writeFileSync('./students.json', JSON.stringify(students))
+fs.writeFileSync('./users.json', JSON.stringify(students))
 

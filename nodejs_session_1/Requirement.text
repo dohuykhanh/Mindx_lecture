@@ -1,0 +1,11 @@
+STEP 1: Tao collection Student_Report_Management gom 2 collections: Users va Reports
+STEP 2: Import file reports.json, users.json ==>  Student_Report_Management
+STEP 3: Tao endpoint CRUD (get, post, put, delete) cho danh sach hoc sinh
+STEP 4: Tao endpoint RD (get, delete) cho danh sach reports
+STEP 5: Tap endpoint Create Reports (post) upload file reports
+STEP 6: Tao middleware Authen cho users (students + admin)
+STEP 7: Tao middleware Author cho admin ==> CRUD list hoc sinh, RD cho danh sach reports
+STEP 8 (Optional): Deploy application to heroku: 
+- Create mongoDB Atlas
+- Connect Nodejs App to mongoDB Atlas
+- Deploy Nodejs App to Heroku
