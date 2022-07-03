@@ -1,0 +1,1 @@
+ReactDOM.render(<h1>Hello from index.js. I am a child componeny</h1>, document.getElementById("root"))
