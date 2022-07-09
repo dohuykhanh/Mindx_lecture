@@ -1,0 +1,17 @@
+.App {
+  padding: 20px 0px 0px 20px;
+}
+
+.fl {
+  display: flex;
+  flex-direction: row;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.ac {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,11 @@
+STEP 1: Design UI // Done
+STEP 2: Create UI with JSX  // Done
+    -   Job list (Button Delete)  // Done
+    -   Input text + button add Job // Done
+STEP 3: Tạo state ở App.js ==> store job list // Done
+STEP 4: Xử lý event add job khi user click vào button add job (State + event handling) // Done
+STEP 5: Xử lý event xóa job khi user click vào button delete job // Done
+
+
+STEP 6: Xử lý event update job khi user click vào button update job // Home work
+
