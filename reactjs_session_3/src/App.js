@@ -30,6 +30,16 @@ function App() {
     setJobList([...jobList, job])
   }
 
+  const updateJobAnotherVersion = (id, jobname)  => {
+    const newJobList = [...jobList]
+    newJobList.forEach(el => {
+      if (el.id === id) {
+        el.name = jobname
+      }
+    })
+    setJobList(newJobList)
+  }
+
   const deleteJob = (id) => {
     const newJobList = jobList.filter(el => {
       return el.id !== id
