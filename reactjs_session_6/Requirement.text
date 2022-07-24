@@ -1,0 +1,10 @@
+Create Log in application
+
+Step 1: Init application BE (login) ==> reuse login app // Done
+Step 2: Create UI login (name + password) // Done
+-  Create UI User Info (name + password + id)
+Step 3: Implement request login (method: POST) // Done
+Step 4: Sử dụng 3 API để store user information
+-   Local Storage (Browser API) 
+-   Context API (React > 16.3)
+-   Redux (set up package)
