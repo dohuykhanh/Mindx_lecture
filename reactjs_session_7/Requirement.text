@@ -1,0 +1,7 @@
+MUST USE: Implement Redux
+
+Step 1: Create 3 component: Subtract Component( - ), Add component ( +), Number (Store value) // done
+Step 2: Create Store Redux // Done
+Step 3: Create Slices (Tổ hợp các Reducer) // Done
+Step 4: Implement Action (useDispatch) của Subtract Component và Add Component // Done
+Step 5: Implement Subcribe (useSelector)   //Done
