@@ -26,6 +26,7 @@ function studentMiddleWare(req, res, next) {
   //     isHacker = false
   // }
   const isUnauthorize = index < 0;
+  //const isUnauthorize = index < 0? true: false;
 
   if (isUnauthorize) {
     res.status(401);
